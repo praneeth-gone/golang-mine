@@ -1,0 +1,29 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+
+	type person struct {
+		FirstName   string
+		LastName    string
+		FavIcecream []string
+	}
+
+	p1 := person{
+
+		FirstName: "praneeth",
+		LastName:  "gone",
+		FavIcecream: []string{"butterScotch",
+			"vainila",
+			"strawberry"},
+	}
+
+	fmt.Println(p1)
+	for i, v := range p1.FavIcecream {
+
+		fmt.Println(i, v)
+	}
+}
