@@ -1,0 +1,59 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+
+	type person struct {
+		FirstName   string
+		LastName    string
+		FavIcecream []string
+	}
+
+	p1 := person{
+
+		FirstName: "praneeth",
+		LastName:  "gone",
+		FavIcecream: []string{"butterScotch",
+			"vainila",
+			"strawberry"},
+	}
+
+	p2 := person{
+
+		FirstName: "pranavi",
+		LastName:  "misy",
+		FavIcecream: []string{"chocolate",
+			"vainila",
+			"strawberry"},
+	}
+
+	fmt.Println(p1)
+	for i, v := range p1.FavIcecream {
+
+		fmt.Println(i, v)
+
+	}
+
+	fmt.Println(p2)
+
+	m := map[string]person{
+
+		p1.LastName: p1,
+		p2.LastName: p2,
+	}
+	fmt.Println(m)
+
+	for k, v := range m {
+
+		fmt.Println(k)
+		fmt.Println(v.FirstName)
+		fmt.Println(v.LastName)
+		for i, val := range v.FavIcecream {
+
+			fmt.Println(i, val)
+		}
+	}
+}
