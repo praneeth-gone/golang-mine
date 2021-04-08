@@ -1,0 +1,25 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+
+	p1 := struct {
+		name    string
+		friends map[string]int
+		favFood []string
+	}{
+
+		name: "james",
+		friends: map[string]int{
+
+			"ola":      32,
+			"uber":     30,
+			"flipkart": 26,
+		},
+		favFood: []string{"biryani", "roti"},
+	}
+	fmt.Println(p1)
+}
