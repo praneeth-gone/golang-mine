@@ -1,0 +1,48 @@
+package main
+
+import (
+	"fmt"
+)
+
+type vehicle struct {
+	doors int
+	color string
+}
+
+type truck struct {
+	vehicle
+	fourwheel bool
+}
+
+type sedan struct {
+	vehicle
+	luxuary bool
+}
+
+func main() {
+
+	t := truck{
+
+		vehicle: vehicle{
+
+			doors: 4,
+			color: "black",
+		},
+
+		fourwheel: true,
+	}
+
+	s := sedan{
+
+		vehicle: vehicle{
+			doors: 4,
+			color: "white",
+		},
+
+		luxuary: false,
+	}
+
+	fmt.Println(t.vehicle)
+	fmt.Println(s.luxuary)
+
+}
