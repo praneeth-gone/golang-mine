@@ -22,4 +22,8 @@ func main() {
 		favFood: []string{"biryani", "roti"},
 	}
 	fmt.Println(p1)
+	for k, v := range p1.friends {
+
+	   fmt.Println(k, v)
+	}
 }
